@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vartika.css">
+</head>
+<body>
+    <h1>Kanban</h1>
+   <div id="container">
+   <div class="To" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h2>To-Do</h2>
+    <button onclick="addTask()" class="add-btn">+ New Task</button>
+    
+    <div id="moveableBar" class="task-bar" draggable="true" ondragstart="drag(event)">
+        <input type="text" placeholder="+ Add the task here" oninput="save()">
+        <span class="delete-btn" onclick="deleteTask(this)">X</span>
+    </div>
+</div>
+    <div class="Toon" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>ON Progress</h2>
+    </div>
+
+    <div class="Tocom" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2> Completed</h2>
+    </div>
+</div>
+<script src="javasscript.js"></script>
+</body>
+</html>
